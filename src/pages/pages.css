@@ -1,0 +1,568 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* Center vertically */
+  padding: 20px;
+}
+
+.image-container {
+  margin-right: 20px;
+
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid black;
+
+}
+
+.info-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.hours-of-operation {
+  margin-top: 20px;
+}
+
+.order-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: #45a049;
+}
+
+.container {
+  margin: auto;
+  padding: 16px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 1 calc(25% - 1rem);
+  /* Adjust width of each card */
+  margin-bottom: 1rem;
+  /* Add margin to create space around each card */
+}
+
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card-select {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.card-button {
+  background-color: #3498db;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.place-order-button {
+  margin-top: 16px;
+  background-color: #2ecc71;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.place-order-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.edit-drink-card {
+  width: 100%;
+  max-width: 600px;
+  /* Adjust the maximum width as needed */
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-drink-card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.edit-drink-card-select {
+  width: calc(50% - 5px);
+  /* Adjust width to fit two selects */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+.remove-drink-button {
+  appearance: button;
+  background-color: rgb(202, 31, 31);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  /* Adjust font size */
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 10px 10px;
+  /* Adjust padding */
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.remove-drink-button:after {
+  background-clip: padding-box;
+  background-color: red;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.remove-drink-button:main,
+.remove-drink-button:focus {
+  user-select: auto;
+}
+
+.remove-drink-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.remove-drink-button:disabled {
+  cursor: auto;
+}
+
+.remove-drink-button:active:after {
+  border-width: 0 0 0px;
+}
+
+.remove-drink-button:active {
+  padding-bottom: 7px;
+  /* Adjust padding */
+}
+
+/* ------------------------------------------------------------------------------------------- */
+.edit-drink-button {
+  appearance: button;
+  background-color: rgb(209, 200, 32);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  /* Adjust font size */
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 10px 10px;
+  /* Adjust padding */
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.edit-drink-button:after {
+  background-clip: padding-box;
+  background-color: rgb(242, 225, 36);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.edit-drink-button:main,
+.edit-drink-button:focus {
+  user-select: auto;
+}
+
+.edit-drink-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.edit-drink-button:disabled {
+  cursor: auto;
+}
+
+.edit-drink-button:active:after {
+  border-width: 0 0 0px;
+}
+
+.edit-drink-button:active {
+  padding-bottom: 7px;
+  /* Adjust padding */
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+
+.submit-button {
+  appearance: button;
+  background-color: rgb(101, 167, 51);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 20px 20px 0 0;
+  /* Adjust margin for positioning */
+  outline: none;
+  overflow: visible;
+  padding: 10px 20px;
+  /* Adjust padding */
+  position: absolute;
+  /* Position absolutely */
+  bottom: 20px;
+  /* 20px from the bottom */
+  right: 20px;
+  /* 20px from the right */
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+}
+
+.submit-button:after {
+  background-clip: padding-box;
+  background-color: rgb(138, 216, 70);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.submit-button:main,
+.submit-button:focus {
+  user-select: auto;
+}
+
+.submit-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.submit-button:disabled {
+  cursor: auto;
+}
+
+.submit-button:active:after {
+  border-width: 0 0 0px;
+}
+
+.submit-button:active {
+  padding-bottom: 7px;
+  /* Adjust padding */
+}
+
+/* -------------------------------------------------------------------------------------- */
+.remove-cart-button {
+  appearance: button;
+  background-color: rgb(202, 31, 31);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  /* Ensure it takes full width */
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 25px auto;
+  /* Center horizontally */
+  outline: none;
+  overflow: visible;
+  padding: 10px 20px;
+  /* Adjust padding */
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+}
+
+.remove-cart-button:after {
+  background-clip: padding-box;
+  background-color: red;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.remove-cart-button:main,
+.remove-cart-button:focus {
+  user-select: auto;
+}
+
+.remove-cart-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.remove-cart-button:disabled {
+  cursor: auto;
+}
+
+.remove-cart-button:active:after {
+  border-width: 0 0 0px;
+}
+
+.remove-cart-button:active {
+  padding-bottom: 7px;
+  /* Adjust padding */
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+.add-drink-button {
+  appearance: button;
+  background-color: rgb(101, 167, 51);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin-top: 15px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.add-drink-button:after {
+  background-clip: padding-box;
+  background-color: rgb(138, 216, 70);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.add-drink-button:main,
+.add-drink-button:focus {
+  user-select: auto;
+}
+
+.add-drink-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.add-drink-button:disabled {
+  cursor: auto;
+}
+
+.add-drink-button:active:after {
+  border-width: 0 0 0px;
+}
+
+.add-drink-button:active {
+  padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.order-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow cards to wrap onto multiple lines */
+  justify-content: center;
+  /* Center cards horizontally */
+  padding: 20px;
+  /* Adjust padding as needed */
+}
+
+.past-order-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  /* Increase padding for larger cards */
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  /* Increase border-radius for a rounded look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+  /* Adjust margin between cards */
+  min-width: 500px;
+  /* Increase minimum width for each card */
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  /* Arrange content in a line */
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  /* Set title color */
+}
+
+.card-content {
+  margin-bottom: 20px;
+  color: #555;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}

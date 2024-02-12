@@ -1,0 +1,162 @@
+.navbar-item,
+.button,
+.navbar-burger span {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   /* Define your preferred font family */
+}
+
+
+a {
+   text-decoration: none;
+   color: inherit;
+
+}
+
+.navbar-logo-group {
+   display: flex;
+   flex-direction: column;
+}
+
+.navbar-item {
+   padding: 10px 12px;
+   font-weight: bold;
+   font-size: 12px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 1px 1px 3px black;
+
+}
+
+.navbar-logo {
+   height: 150px;
+
+   width: auto;
+
+   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.178);
+}
+
+.navbar {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+   border: 2px solid black;
+}
+
+.navbar-menu {
+   display: flex;
+   justify-content: space-around;
+   width: 90%;
+   max-height: 60px;
+   background-color: tan;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+.navbar-brand {
+   display: flex;
+   flex-wrap: nowrap;
+}
+
+.navbar-start {
+   display: flex;
+   max-height: 50px;
+   justify-content: space-evenly;
+   width: 80%;
+   align-items: center;
+   border-radius: 10px;
+}
+
+.navbar-end {
+   display: flex;
+   justify-content: flex-end;
+   width: 10%;
+   align-items: flex-start;
+   padding: 20px;
+}
+
+.button {
+   padding: 10px 12px;
+   font-weight: bold;
+   font-size: 12px;
+   border-radius: 5px;
+   border: none;
+   box-shadow: 1px 1px 3px black;
+}
+
+.buttons {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+   margin-left: auto;
+}
+
+.button:hover {
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+
+.navbar {
+   background-color: tan;
+   border-radius: 20px;
+   padding: 10px;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.navbar:hover {
+   background-color: rgb(129, 80, 15);
+}
+
+.navbar-logo {
+   border-radius: 50%;
+   margin-right: 10px;
+}
+
+.navbar-burger {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-burger:hover {
+   background-color: black;
+}
+
+.navbar-burger span {
+   background-color: white;
+   height: 3px;
+   margin: 5px 0;
+   display: block;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-menu {
+   border-radius: 20px;
+   overflow: hidden;
+   transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-menu:hover {
+   background-color: tan;
+}
+
+
+.navbar-item:hover {
+   color: black;
+}
+
+.buttons .button {
+   background-color: white;
+   border-radius: 20px;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.buttons .button:hover {
+   background-color: rgb(129, 80, 15);
+   color: white;
+}
+
+*/
