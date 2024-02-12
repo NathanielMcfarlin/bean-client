@@ -30,7 +30,6 @@ The app allows users to browse a variety of drink options, customize their prefe
 4. Manage orders by updating or removing items from the cart.
 5. Clear the cart entirely if desired.
 ### Future Improvements
-- Implement user authentication for personalized experiences.
 - Enhance the user interface with responsive design.
 - Integrate payment processing for online orders.
 
