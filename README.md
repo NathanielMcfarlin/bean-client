@@ -18,19 +18,23 @@ The app allows users to browse a variety of drink options, customize their prefe
 - Back-end: Python, Django
 - Database: SQLite
 
-
 ## Installation Instructions
 1. Clone the repository: git clone git@github.com:NathanielMcfarlin/bean-client.git
 2. Navigate to the project directory: cd the-bean
 3. Install dependencies: npm install
 4. Run the server: npm run dev
  ### Usage
-4. Upon launching the app, users can browse through available drink options.
-5. Select desired drinks and customize preferences as needed.
-6. Add items to the cart for easy tracking.
-7. Manage orders by updating or removing items from the cart.
-8. Clear the cart entirely if desired.
+1. Upon launching the app, users can browse through available drink options.
+2. Select desired drinks and customize preferences as needed.
+3. Add items to the cart for easy tracking.
+4. Manage orders by updating or removing items from the cart.
+5. Clear the cart entirely if desired.
 ### Future Improvements
 - Implement user authentication for personalized experiences.
 - Enhance the user interface with responsive design.
 - Integrate payment processing for online orders.
+
+
+## Related Links
+- ERD: https://dbdiagram.io/d/The-Bean-65affee3ac844320ae8ebd49
+- Wireframe: https://miro.com/app/board/uXjVN2RerlA=/
